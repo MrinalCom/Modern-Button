@@ -1,0 +1,72 @@
+/* button{
+    border: 1px solid white;
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    height: 60px;
+    width: 120px;
+    box-shadow:10px black;
+    transform: translateX(120px) translateY(170px);
+    font-size: large;
+    /* transition: all 1s ease-in 1s; */
+    /* animation-name: mrinal;
+    animation-duration: 5s;
+    animation-range-start: 1s;
+} */
+/* button:hover{
+    cursor: pointer;
+    background-color: black;
+} */
+/* @keyframes mrinal {
+    0%{
+        width: 30px;
+        background-color: aqua;
+    }
+    50%{
+        width: 80px;
+        background-color: blue;
+    }
+    100%{
+        width: 120px;
+        background-color: blueviolet;
+    }
+} */ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-pink{
+    background-color: #e84949;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    font-size: 18px;
+    box-shadow: 5px 7px 0px #0000003f;
+    position: relative;
+    z-index: 0;
+}
+.btn-pink::before{
+    content:"";
+    background-color: #1f1f1f;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;    
+    transition: 0.8s;
+    z-index: -1;
+}
+.btn-pink:hover::before{
+    transform: scaleX(1);
+}
